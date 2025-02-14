@@ -1,14 +1,14 @@
-"use client"
+"use client";
 /**
- * @author //Munneth 
+ * @author //Munneth
  * @detail General Menu Nav bar taken from the ShadCn UI library
  */
 
 //imports
-import * as React from "react"
-import Link from "next/link"
-import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
+import * as React from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { Icons } from "@/components/icons";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,118 +17,99 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 
 //necesaary components
-const drop1 : { title: string; href: string; description: string }[] = [
+const drop1: { title: string; href: string; description: string }[] = [
   {
     title: "Content 1",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 2",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 3",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 4",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 5",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
+];
 
-]
-
-const drop2 : { title: string; href: string; description: string }[] = [
+const drop2: { title: string; href: string; description: string }[] = [
   {
     title: "Content 1",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 2",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 3",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 4",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 5",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
+];
 
-]
-
-const drop3 : { title: string; href: string; description: string }[] = [
+const drop3: { title: string; href: string; description: string }[] = [
   {
     title: "Content 1",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 2",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 3",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 4",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
   {
     title: "Content 5",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "This is a short description of the content.",
+    description: "This is a short description of the content.",
   },
-
-]
+];
 
 //Init menu contents taken from ShadCN site
 function NavigationMenuDemo() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-
-      <NavigationMenuItem>
+        <NavigationMenuItem>
           <NavigationMenuTrigger>Drop 1</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -144,7 +125,6 @@ function NavigationMenuDemo() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-
 
         <NavigationMenuItem>
           <NavigationMenuTrigger>Drop 2</NavigationMenuTrigger>
@@ -179,10 +159,9 @@ function NavigationMenuDemo() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 /**!!IMPORTANT!!
@@ -190,7 +169,7 @@ function NavigationMenuDemo() {
  * was fixed by exporting the function after its call below
  */
 export default NavigationMenuDemo;
- 
+
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
@@ -202,7 +181,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            className,
           )}
           {...props}
         >
@@ -213,7 +192,6 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
-
+  );
+});
+ListItem.displayName = "ListItem";
